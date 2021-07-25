@@ -30,6 +30,7 @@ class BookAdapter(val books: List<Book>) : RecyclerView.Adapter<BookAdapter.MyVi
                 author.text = book.author
                 Glide.with(holder.photo)
                     .load(book.img)
+                    .optionalCenterInside()
                     .diskCacheStrategy(DiskCacheStrategy.DATA)
                     .into(holder.photo)
             }

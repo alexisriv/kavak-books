@@ -9,11 +9,15 @@ import org.sixelasavir.product.book.model.Book
 
 class BookRepositoryImp(private val api: BookApi) : BookRepository {
     override fun getBooks(): Flow<List<Book>> = flow {
-        emit(api.getBooks().results)
+        api.getBooks().results.books?.let {
+            emit(it)
+        } ?: emit(arrayListOf<Book>())
     }.flowOn(IO)
 
     override fun getBestSellers(): Flow<List<String>> = flow {
-        emit(api.getBestSellers().results.all)
+        api.getBestSellers().results.all?.let {
+            emit(it)
+        } ?: emit(arrayListOf<String>())
     }.flowOn(IO)
 }
 

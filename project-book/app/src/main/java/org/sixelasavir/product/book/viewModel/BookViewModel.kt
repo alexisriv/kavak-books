@@ -44,9 +44,9 @@ class BookViewModel(private val repository: BookRepository) : ViewModel() {
                         }
                     }
                     when {
-                        itemBook.genre.equals(HISTORY, true) -> booksHistory
-                        itemBook.genre.equals(SCIENCE, true) -> booksScience
-                        itemBook.genre.equals(BUSINESS, true) -> booksBusiness
+                        itemBook.genre.equals(HISTORY, true) -> booksHistory.add(itemBook)
+                        itemBook.genre.equals(SCIENCE, true) -> booksScience.add(itemBook)
+                        itemBook.genre.equals(BUSINESS, true) -> booksBusiness.add(itemBook)
                     }
                 }
 
