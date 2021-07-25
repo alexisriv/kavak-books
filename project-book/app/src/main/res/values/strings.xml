@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">book</string>
+    <string name="best_sellers">Best Sellers, Count: %1$i</string>
+    <string name="history">History, Count: %1$i</string>
+    <string name="science">Science, Count: %1$i</string>
+    <string name="business">Business, Count: %1$i</string>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/bestSellersLayout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/bestSellersTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/best_sellers"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bestSellersRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/historyLayout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/bestSellersLayout">
+
+            <TextView
+                android:id="@+id/historyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/scienceLayout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historyLayout">
+
+            <TextView
+                android:id="@+id/scienceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/science"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/scienceRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/businessLayout"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scienceLayout">
+
+            <TextView
+                android:id="@+id/businessTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/business"
+                tools:layout_editor_absoluteX="43dp"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/businessRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
